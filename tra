@@ -18,6 +18,17 @@ val cs = b(3).toLowerCase
 val df = if (cs == "m") "Male" else "Female" 
 ((wc+cn),e.toInt,f.toInt,f.toInt,n.toInt,df) }
 
+Transformation 2: (select dno,sex,sum(sal) from table)
+val a = ma.map{ b=>
+val c = b.split(",")
+val d = c(4)
+val e = c(3)
+val f = (d,e)
+val g = c(2).toInt
+(f,g)
+}
+
+
 
 
 //match
