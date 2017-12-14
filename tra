@@ -27,6 +27,23 @@ val f = (d,e)
 val g = c(2).toInt
 (f,g)
 }
+Adding the scehma to the data my using case class:
+
+case class emp(Sno:Int,Sname:String,sal:Int,Sex:String,Did:Int)
+Inserting Data with the case class schema:
+
+val a = am.map{b=>
+val c = b.split(",")
+val d = c(0).toInt
+val e = c(1)
+val f = c(2).toInt
+val g = c(3)
+val h = c(4).toInt
+val i = emp(d,e,f,g,h)
+i
+}
+
+val b = a.map(c=>(c.Sno,C.Did))
 
 
 
