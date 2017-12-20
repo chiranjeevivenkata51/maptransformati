@@ -69,3 +69,17 @@ Output:
 >d.foreach(println)
 104,Sai,52000
 105,Maddali,100000
+Select Sname,Salary from table where sal > 28000
+scala>:paste
+val e = d.map{a=>
+val b=a.split(",")
+(b(1),b(2).toInt)
+(b(1),b(2).toInt)
+}
+Output:
+scala> e.foreach(println)
+(Sai,52000)
+(Maddali,100000)
+
+
+
