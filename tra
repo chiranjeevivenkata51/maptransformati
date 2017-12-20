@@ -27,11 +27,11 @@ val f = (d,e)
 val g = c(2).toInt
 (f,g)
 }
+
 Adding the scehma to the data my using case class:
 
 case class emp(Sno:Int,Sname:String,sal:Int,Sex:String,Did:Int)
 Inserting Data with the case class schema:
-
 val a = am.map{b=>
 val c = b.split(",")
 val d = c(0).toInt
@@ -45,9 +45,6 @@ i
 
 val b = a.map(c=>(c.Sno,C.Did))
 
-
-
-
 //match
 val a = l.map{b=>
 val c = b.split(",")
@@ -59,3 +56,16 @@ case false=>"B"
 }
 mon
 }
+
+Select * from table where sal > 28000 in RDD way
+(Data)
+101,Chiranjeevi,20000
+102,Manikanta,18000
+103,Venkata,28000
+104,Sai,52000
+105,Maddali,100000
+scala> val d = df.filter(c=> (c.split(",")(2).toInt > 28000))
+Output:
+>d.foreach(println)
+104,Sai,52000
+105,Maddali,100000
